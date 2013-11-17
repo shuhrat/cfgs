@@ -4,7 +4,7 @@ done
 unset file
 
 chmod u+x ~/cfgs/git-completion.bash
-chmod u+x ~/cfgs/git-promt.sh
+chmod u+x ~/cfgs/git-prompt.sh
 
 source ~/.profile
 
