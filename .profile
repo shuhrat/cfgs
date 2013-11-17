@@ -22,7 +22,7 @@ alias -- -='cd -'
 
 # Programs
 alias vim='vim -o'
-alias cssc='csscomb -c ~/configs/.csscomb.json '
+alias cssc='csscomb -c ~/cfgs/.csscomb.json '
 alias f='open -a Finder'
 
 if [ -f "$HOME/.extrarc" ]; then
@@ -123,12 +123,12 @@ if [[ `which hub` != '' ]]; then
 fi
 
 # git prompt & completion
-if [ -f ~/configs/git-prompt.sh ]; then
-    . ~/configs/git-prompt.sh
+if [ -f ~/cfgs/git-prompt.sh ]; then
+    . ~/cfgs/git-prompt.sh
 fi
 
-if [ -f ~/configs/git-completion.bash ]; then
-    . ~/configs/git-completion.bash
+if [ -f ~/cfgs/git-completion.bash ]; then
+    . ~/cfgs/git-completion.bash
 fi
 
 # git-enabled prompt
@@ -154,7 +154,7 @@ function prompt {
   local IDENTITY="$GREEN""local"
 
   if [ -n "$SSH_CLIENT" ]; then
-    IDENTITY="$GREEN\u$WHITE at $RED\h $WHITE(ssh)"
+    IDENTITY="$GREEN\u$WHITE@$RED\h $WHITE(ssh)"
   fi
 
   # \u = username

@@ -4,6 +4,8 @@ done
 unset file
 
 chmod u+x ~/cfgs/git-completion.bash
-chmod u+x ~/cfgs/git-promt.bash
+chmod u+x ~/cfgs/git-promt.sh
 
-git clone "git://github.com/rndD/vimi.git" ~/.vimi && cd ~/.vimi && make
+source ~/.profile
+
+git clone "git://github.com/miripiruni/vimi.git" ~/.vimi && cd ~/.vimi && make
