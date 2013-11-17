@@ -8,4 +8,4 @@ chmod u+x ~/cfgs/git-promt.sh
 
 source ~/.profile
 
-git clone "git://github.com/miripiruni/vimi.git" ~/.vimi && cd ~/.vimi && make
+git clone "git://github.com/Shuhrat/vimi.git" ~/.vimi && cd ~/.vimi && make
