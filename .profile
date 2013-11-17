@@ -203,3 +203,7 @@ function escape-svg {
 # .profile utils
 alias vp='vim ~/.profile'
 alias sp='source ~/.profile'
+
+title () { 
+  echo -ne "\033]$mode;$@\007" 
+}
