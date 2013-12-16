@@ -204,6 +204,8 @@ function escape-svg {
 alias vp='vim ~/.profile'
 alias sp='source ~/.profile'
 
-title () { 
+title () {
   echo -ne "\033]$mode;$@\007" 
 }
+
+alias cls='clear'
