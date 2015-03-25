@@ -1,9 +1,10 @@
 [user]
     name = Shuhrat Shadmonkulov
-    email = shadmonkulov@gmail.com
+    email = zumra6a@yandex-team.ru
 [core]
     mergeoptions = --no-ff
     pager = less -r
+	excludesfile = /Users/zumra6a/.gitignore_global
 [alias]
     vlog = log --pretty='%h (%an) %s' --graph
     st = status

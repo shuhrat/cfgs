@@ -7,6 +7,8 @@ export BLOCKSIZE=K
 export EDITOR=vim
 export PAGER=less
 
+ulimit -n 4096
+
 alias h='fc -l'
 alias j='jobs'
 alias m=$PAGER
@@ -114,6 +116,10 @@ alias grf='git merge-base dev `gbc`' # WAT?
 # updates dev and then rebases current branch
 alias gudc='god && gpf && go - && grd'
 
+alias gfu='git fetch upstream'
+alias grud='gfu && git rebase upstream/dev'
+
+
 # defunkt hub alias
 if [[ `which hub` != '' ]]; then
     alias git='hub'
@@ -165,8 +171,8 @@ function prompt {
 
 prompt
 
-# npm 
-export PATH="./node_modules/.bin:$PATH"
+# npm
+export PATH="./node_modules/.bin:$HOME/node_modules/.bin:$PATH"
 
 alias npmp="sudo npm publish"
 alias npma="sudo npm adduser"
@@ -197,7 +203,7 @@ function svg2dataURI {
 }
 
 function escape-svg {
-    echo "console.log(escape('`cat $1`'))" | node    
+    echo "console.log(escape('`cat $1`'))" | node
 }
 
 # .profile utils
@@ -205,7 +211,20 @@ alias vp='vim ~/.profile'
 alias sp='source ~/.profile'
 
 title () {
-  echo -ne "\033]$mode;$@\007" 
+  echo -ne "\033]$mode;$@\007"
 }
 
 alias cls='clear'
+alias migrate='curl -L https://github.yandex-team.ru/zumra6a/serp-migration/raw/master/migrate.sh | sh'
+
+alias mrb='git rebase -i HEAD~4'
+
+function gbd() {
+    branch=""
+    branches=`git branch --list`
+    while read -r branch; do
+      clean_branch_name=${branch//\*\ /}
+      description=`git config branch.$clean_branch_name.description`
+      printf "%-15s %s\n" "$branch" "$description"
+    done <<< "$branches"
+}
