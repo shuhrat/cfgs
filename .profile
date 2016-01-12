@@ -1,6 +1,11 @@
-# macports
-alias portup="sudo port selfupdate && sudo port upgrade outdated"
-export PATH=$HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH
+export GEM_HOME=$HOME/.gem
+NODE_MODULES_HOME=$HOME/node_modules
+
+export PATH="$HOME/.bin:$GEM_HOME/bin:$NODE_MODULES_HOME/.bin:./node_modules/.bin:$PATH"
+
+if [ -f "$HOME/.ci-tools.rc" ]; then
+    source "$HOME/.ci-tools.rc"
+fi
 
 export LANG=en_US.UTF-8
 export BLOCKSIZE=K
@@ -172,8 +177,6 @@ function prompt {
 prompt
 
 # npm
-export PATH="./node_modules/.bin:$HOME/node_modules/.bin:$PATH"
-
 alias npmp="sudo npm publish"
 alias npma="sudo npm adduser"
 alias npmi="sudo npm install"
