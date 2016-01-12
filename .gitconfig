@@ -1,5 +1,5 @@
 [user]
-    name = Shuhrat Shadmonkulov
+    name = Шухрат Шадмонкулов
     email = zumra6a@yandex-team.ru
 [core]
     mergeoptions = --no-ff
@@ -42,3 +42,10 @@
 	default = matching
 [rebase]
 	autosquash = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = false
+[lfs]
+	batch = true
+	concurrenttransfers = 15
