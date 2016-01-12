@@ -231,3 +231,6 @@ function gbd() {
       printf "%-15s %s\n" "$branch" "$description"
     done <<< "$branches"
 }
+
+export NVM_DIR="/Users/zumra6a/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
