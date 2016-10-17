@@ -4,7 +4,7 @@
 [core]
     mergeoptions = --no-ff
     pager = less -r
-    excludesfile = ~/.global-gitignore
+    excludesfile = ~/.gitignore
 [alias]
     vlog = log --pretty='%h (%an) %s' --graph
     st = status
