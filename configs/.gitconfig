@@ -1,9 +1,10 @@
 [user]
-    name = Shuhrat Shadmonkulov
-    email = shadmonkulov@gmail.com
+    name = Шухрат Шадмонкулов
+    email = zumra6a@yandex-team.ru
 [core]
     mergeoptions = --no-ff
     pager = less -r
+    excludesfile = ~/.global-gitignore
 [alias]
     vlog = log --pretty='%h (%an) %s' --graph
     st = status
@@ -23,21 +24,21 @@
     interactive = auto
     status = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 [merge]
-	log = true
+    log = true
 [push]
-	default = matching
+    default = matching
 [rebase]
-	autosquash = true
+    autosquash = true
