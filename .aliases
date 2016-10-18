@@ -146,19 +146,3 @@ fi
 # .profile utils
 alias vp='vim ~/.profile'
 alias sp='source ~/.profile'
-
-    Contact GitHub API Training Shop Blog About
-
-
-
-
-# make alias
-if [[ `which gmake` != '' ]]; then
-    alias make='gmake'
-else
-    alias gmake='make'
-fi
-
-# .profile utils
-alias vp='vim ~/.profile'
-alias sp='source ~/.profile'
